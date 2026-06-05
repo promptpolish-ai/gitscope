@@ -1,0 +1,66 @@
+name: 'GitScope Report'
+description: 'Generate beautiful HTML git reports for your repository'
+author: 'promptpolish-ai'
+branding:
+  icon: 'activity'
+  color: 'blue'
+
+inputs:
+  path:
+    description: 'Path to git repository'
+    required: false
+    default: '.'
+  output:
+    description: 'Output file name'
+    required: false
+    default: 'gitscope-report.html'
+  template:
+    description: 'Template CSS file (premium templates available at gitscope-pro.vercel.app)'
+    required: false
+  open:
+    description: 'Open in browser'
+    required: false
+    default: 'false'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install gitscope
+      shell: bash
+      run: npm install -g @promptpolish-ai/gitscope
+
+    - name: Generate report
+      shell: bash
+      run: |
+        ARGS="--output ${{ inputs.output }}"
+        if [ -n "${{ inputs.template }}" ]; then
+          ARGS="$ARGS --template ${{ inputs.template }}"
+        fi
+        gitscope ${{ inputs.path }} $ARGS
+
+    - name: Upload report as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: gitscope-report
+        path: ${{ inputs.output }}
+
+    - name: Post comment with link
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const reportFile = '${{ inputs.output }}';
+          const reportUrl = `https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts`;
+          const comment = `## 📊 GitScope Report Generated\n\nYour beautiful git report has been generated!\n\n- 📁 **File:** ${reportFile}\n- ⬇️ **Download:** [GitHub Actions Artifacts](${reportUrl})\n\n> 💡 Want premium report templates? Check out [GitScope Pro](https://gitscope-pro.vercel.app) — 5 beautiful templates for \$5`;
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number || context.payload.pull_request?.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: comment
+          });
