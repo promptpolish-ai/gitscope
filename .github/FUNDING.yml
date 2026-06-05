@@ -1,4 +1,9 @@
-# These are supported funding model platforms
+# Funding links
 
-github: promptpolish-ai
+github: # GitHub Sponsors (not yet enabled)
+custom: 
+  - "https://promptpolish-hub.vercel.app"
+  - "https://gitlog-viz.vercel.app"
+  - "bitcoin:1DQXcKwN95AWqwmwbscG7fRbEYMdWU9GB3"
 buy_me_a_coffee: gitscopetools
+ko_fi: gitscope
