@@ -1,0 +1,4 @@
+*.cjs
+*.js
+!bin/gitscope.js
+node_modules/
