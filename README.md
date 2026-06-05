@@ -61,6 +61,44 @@ MIT — free for personal and commercial use.
 
 ---
 
+
+## 💎 GitScope Pro — Premium Templates ($5)
+
+Take your reports to the next level with **5 premium templates**:
+
+| Template | Style | Best For |
+|----------|-------|----------|
+| 🏢 Corporate Pro | Professional branded | Stakeholder presentations |
+| 💻 Terminal Dark | Hacker aesthetic | Developer showcases |
+| 📊 Dashboard | Charts & metrics | Team dashboards |
+| 📋 Minimal Light | Clean & print-friendly | Documentation |
+| 📈 Executive Summary | One-page KPIs | Management reviews |
+
+```bash
+npx gitscope . --template corporate-pro.css
+```
+
+**⬇️ [Get GitScope Pro — $5](https://gitscope-pro.vercel.app)**
+
+
+
+## 💎 GitScope Pro — Premium Templates
+
+Take your git reports to the next level with **5 premium templates**:
+
+| Template | Style | Best For |
+|----------|-------|----------|
+| 🏢 Corporate Pro | Professional branded | Stakeholder presentations |
+| 💻 Terminal Dark | Hacker aesthetic | Developer showcases |
+| 📊 Dashboard | Charts & metrics | Team dashboards |
+| 📋 Minimal Light | Clean & print-friendly | Documentation |
+| 📈 Executive Summary | One-page KPIs | Management reviews |
+
+
+
+**⬇️ [Get GitScope Pro — $5](https://gitscope-pro.vercel.app)** — One-time payment, lifetime access.
+
+
 ## 💖 Support
 
 If GitScope helps you, consider supporting development:
