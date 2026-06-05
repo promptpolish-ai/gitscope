@@ -58,3 +58,18 @@ MIT — free for personal and commercial use.
 ---
 
 <p align="center">Built with ❤️ for developers who care about their craft.</p>
+
+---
+
+## 💖 Support
+
+If GitScope helps you, consider supporting development:
+
+| Method | Link |
+|--------|------|
+| ☕ Ko-fi | [ko-fi.com/gitscope](https://ko-fi.com/gitscope) |
+| ₿ Bitcoin | `1DQXcKwN95AWqwmwbscG7fRbEYMdWU9GB3` |
+| 🌐 Web Tool | [gitlog-viz.vercel.app](https://gitlog-viz.vercel.app) |
+| 🐙 GitHub | [promptpolish-ai/gitscope](https://github.com/promptpolish-ai/gitscope) |
+
+Every donation helps keep this project alive! ❤️
