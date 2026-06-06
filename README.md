@@ -1,113 +1,85 @@
 # 📊 GitScope
 
-> **Beautiful git contribution reports — from your terminal to your browser in one command.**
-
-GitScope analyzes any git repository and generates a stunning, interactive HTML report with charts and metrics about your contribution patterns.
-
-## ✨ Features
-
-- **📈 Contribution Timeline** — Weekly commit activity over time
-- **🕐 Hourly Heatmap** — When are you most productive?
-- **📅 Day of Week** — Work distribution across the week
-- **👥 Contributor Breakdown** — Per-author stats with additions/deletions
-- **📁 Hot Files** — Which files change the most?
-- **🏆 Streak Tracking** — Longest consecutive day streak
-- **🔥 Beautiful Dark Theme** — Ready for sharing, printing, or embedding
-
-## 🚀 Quick Start
+> **One command. Beautiful HTML report. Any git repo.**
 
 ```bash
-# Run on any git repo
-npx gitscope /path/to/repo
+npx gitscope /path/to/repo --open
+```
 
-# Or install globally
+[![GitHub Repo](https://img.shields.io/badge/GitHub-promptpolish--ai%2Fgitscope-6c5ce7?style=flat&logo=github)](https://github.com/promptpolish-ai/gitscope)
+
+---
+
+## ✨ What It Does
+
+GitScope analyzes ANY git repository and generates a stunning interactive HTML report with:
+
+| Metric | Visualization |
+|--------|--------------|
+| 📈 Total commits, additions, deletions | Overview cards |
+| 🕐 When you code (hourly breakdown) | Bar chart |
+| 📅 Day-of-week patterns | Doughnut chart |
+| 👥 Per-contributor stats | Table with first/last commit |
+| 📁 Most-changed files | Ranked list |
+| 🏆 Longest streak | Badge |
+
+## 🚀 Quick Start (30 seconds)
+
+```bash
+# No install needed — runs via npx
+npx gitscope /path/to/git/repo --open
+```
+
+That's it. One command. Your browser opens with a full report.
+
+### Other ways to use it
+
+```bash
+# Current directory
+npx gitscope .
+
+# Filter by date and author
+npx gitscope --since "2024-01-01" --author "yourname"
+
+# Save to a specific file
+npx gitscope -o my-report.html
+
+# Install globally
 npm install -g gitscope
 gitscope .
 ```
 
-## 📖 Usage
+## 🖼️ Example
 
-```bash
-# Basic usage — analyze current directory
-gitscope
+Run this on any repo — the report includes Chart.js interactive graphs, dark theme, and is fully self-contained (no internet needed after generation).
 
-# Analyze specific repo
-gitscope /path/to/repo
+## 📦 GitScope Pro ($5)
 
-# Filter by time range
-gitscope --since "2024-01-01" --until "2024-12-31"
+Get **5 premium templates** for professional use:
 
-# Filter by author
-gitscope --author "Maria"
+| Template | Use Case |
+|----------|----------|
+| 🏢 Corporate Pro | Stakeholder presentations |
+| 💻 Terminal Dark | Developer portfolios |
+| 📊 Dashboard | Team metrics dashboard |
+| 📋 Minimal Light | Documentation embedding |
+| 📈 Executive Summary | One-page KPIs |
 
-# Custom output file
-gitscope -o my-report.html
-
-# Open in browser automatically
-gitscope --open
-```
-
-## 🖼️ Sample
-
-The report generates a fully self-contained HTML file with embedded Chart.js — no internet needed after generation.
-
-## 💰 License
-
-MIT — free for personal and commercial use.
-
----
-
-<p align="center">Built with ❤️ for developers who care about their craft.</p>
-
----
-
-
-## 💎 GitScope Pro — Premium Templates ($5)
-
-Take your reports to the next level with **5 premium templates**:
-
-| Template | Style | Best For |
-|----------|-------|----------|
-| 🏢 Corporate Pro | Professional branded | Stakeholder presentations |
-| 💻 Terminal Dark | Hacker aesthetic | Developer showcases |
-| 📊 Dashboard | Charts & metrics | Team dashboards |
-| 📋 Minimal Light | Clean & print-friendly | Documentation |
-| 📈 Executive Summary | One-page KPIs | Management reviews |
-
-```bash
-npx gitscope . --template corporate-pro.css
-```
-
-**⬇️ [Get GitScope Pro — $5](https://gitscope-pro.vercel.app)**
-
-
-
-## 💎 GitScope Pro — Premium Templates
-
-Take your git reports to the next level with **5 premium templates**:
-
-| Template | Style | Best For |
-|----------|-------|----------|
-| 🏢 Corporate Pro | Professional branded | Stakeholder presentations |
-| 💻 Terminal Dark | Hacker aesthetic | Developer showcases |
-| 📊 Dashboard | Charts & metrics | Team dashboards |
-| 📋 Minimal Light | Clean & print-friendly | Documentation |
-| 📈 Executive Summary | One-page KPIs | Management reviews |
-
-
-
-**⬇️ [Get GitScope Pro — $5](https://gitscope-pro.vercel.app)** — One-time payment, lifetime access.
-
+**[→ Get Pro for $5 (one-time)](https://gitscope-pro.vercel.app)**
 
 ## 💖 Support
 
-If GitScope helps you, consider supporting development:
+GitScope is free and open source (MIT). If it helps you, please consider supporting:
 
-| Method | Link |
-|--------|------|
-| ☕ Ko-fi | [ko-fi.com/gitscope](https://ko-fi.com/gitscope) |
-| ₿ Bitcoin | `1DQXcKwN95AWqwmwbscG7fRbEYMdWU9GB3` |
-| 🌐 Web Tool | [gitlog-viz.vercel.app](https://gitlog-viz.vercel.app) |
-| 🐙 GitHub | [promptpolish-ai/gitscope](https://github.com/promptpolish-ai/gitscope) |
+| Method | How |
+|--------|-----|
+| ❤️ **BTC** | `1DQXcKwN95AWqwmwbscG7fRbEYMdWU9GB3` (any amount) |
+| 🔍 **Free health check** | [gitscore-chi.vercel.app](https://gitscore-chi.vercel.app) |
+| 💎 **Pro templates** | [$5 at gitscope-pro.vercel.app](https://gitscope-pro.vercel.app) |
+| 🐙 **GitHub** | [promptpolish-ai/gitscope](https://github.com/promptpolish-ai/gitscope) |
 
-Every donation helps keep this project alive! ❤️
+> Every contribution — whether $1 in BTC, a star on GitHub, or sharing with a friend — keeps this project alive. Thank you! ❤️
+
+---
+
+Built for developers who care about their craft.
