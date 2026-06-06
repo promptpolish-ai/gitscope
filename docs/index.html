@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitScope — Beautiful Git Reports</title>
+  <meta name="description" content="Open-source CLI that turns any git repo into a stunning interactive HTML report with charts, contributor analytics, and insights.">
+  <meta property="og:title" content="GitScope — Beautiful Git Reports">
+  <meta property="og:description" content="Open-source CLI that turns any git repo into a stunning interactive HTML report.">
+  <meta property="og:url" content="https://gitscope-micro.vercel.app">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#0b0b0b;--text:#e8e6e3;--muted:#6b6b6b;--accent:#a3e635;--line:#1f1f1f}
+    html{font-size:18px}
+    body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;line-height:1.6;-webkit-font-smoothing:antialiased}
+    .container{max-width:720px;margin:0 auto;padding:0 1.5rem}
+    header{padding:5rem 0 3rem}
+    h1{font-family:'Instrument Serif',serif;font-size:3.5rem;font-weight:400;letter-spacing:-.03em;line-height:1.05}
+    h1 em{font-style:italic;color:var(--accent)}
+    .subtitle{color:var(--muted);font-size:.85rem;margin-top:1rem;max-width:500px;line-height:1.7}
+    .code-block{background:#111;border:1px solid var(--line);padding:1rem;font-size:.75rem;margin:1.5rem 0;color:var(--accent)}
+    .code-block .comment{color:var(--muted)}
+    .btn{display:inline-block;font-family:inherit;font-size:.75rem;padding:.7rem 1.5rem;text-decoration:none;transition:all .2s}
+    .btn-primary{background:var(--accent);color:var(--bg);border:none}
+    .btn-primary:hover{background:#b6f25a}
+    .btn-outline{background:transparent;color:var(--text);border:1px solid var(--line)}
+    .btn-outline:hover{border-color:var(--muted)}
+    .actions{display:flex;gap:.75rem;margin:2rem 0;flex-wrap:wrap}
+    footer{border-top:1px solid var(--line);padding:2rem 0;margin-top:4rem;font-size:.65rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap}
+    footer a{color:var(--muted);text-decoration:none}
+    footer a:hover{color:var(--text)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin:1.5rem 0}
+    @media(max-width:600px){.grid{grid-template-columns:1fr}}
+    .grid-item{background:var(--bg);padding:1.25rem}
+    .grid-item .num{font-family:'Instrument Serif',serif;font-size:.7rem;color:var(--accent);margin-bottom:.25rem}
+    .grid-item h3{font-size:.85rem;font-weight:500;margin-bottom:.25rem}
+    .grid-item p{font-size:.7rem;color:var(--muted);line-height:1.6}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>GitScope: <em>beautiful</em> git reports</h1>
+      <p class="subtitle">Open-source CLI that turns any git repository into a stunning interactive HTML report. No config. No signup. Just one command.</p>
+    </header>
+    
+    <div class="code-block">
+      <span class="comment"># That's it.</span><br>
+      npx gitscope /path/to/repo --open
+    </div>
+
+    <div class="grid">
+      <div class="grid-item">
+        <div class="num">01</div>
+        <h3>Contributor analytics</h3>
+        <p>Per-contributor stats with first/last commit dates, commit counts, and lines changed.</p>
+      </div>
+      <div class="grid-item">
+        <div class="num">02</div>
+        <h3>Time patterns</h3>
+        <p>Hourly and day-of-week breakdowns. Know when your team actually codes.</p>
+      </div>
+      <div class="grid-item">
+        <div class="num">03</div>
+        <h3>File hotspots</h3>
+        <p>Most-changed files ranked. See what's getting the most churn.</p>
+      </div>
+      <div class="grid-item">
+        <div class="num">04</div>
+        <h3>Streaks & stats</h3>
+        <p>Longest commit streak, total commits, additions, deletions — all in one view.</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a href="https://gitscope-micro.vercel.app" class="btn btn-primary">Try it → $1</a>
+      <a href="https://gitscope-pro.vercel.app" class="btn btn-outline">Pro templates $5</a>
+      <a href="https://github.com/promptpolish-ai/gitscope" class="btn btn-outline">GitHub →</a>
+    </div>
+
+    <footer>
+      <span>© 2026 GitScope · MIT</span>
+      <span>BTC: <span style="color:var(--accent)">1DQXcKwN95AWqwmwbscG7fRbEYMdWU9GB3</span></span>
+    </footer>
+  </div>
+</body>
+</html>
